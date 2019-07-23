@@ -12,7 +12,7 @@ func main() {
 	fmt.Print("Enter digits ")
 	str, err := getline()
 	if err == nil {
-		fmt.Println("Here is the result:", sumNumbers(str))
+		fmt.Println("Here is the res:", sumnums(str))
 	}
 }
 
@@ -20,7 +20,7 @@ func getline() (string, error) {
 	return bufio.NewReader(os.Stdin).ReadString('\n')
 }
 
-func sumNumbers(str string) float64 {
+func sumnums(str string) float64 {
 	var sum float64
 	for _, v := range strings.Fields(str) {
 		i, err := strconv.ParseFloat(v, 64)
